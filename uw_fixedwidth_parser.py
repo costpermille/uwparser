@@ -71,6 +71,7 @@ def parse_first(lines):
         instructor = "TBD"
     if ", " in instructor:
         instructor = instructor.split(", ")
+        # Reverse names at comma point (last, first -> first last)
         instructor = "{} {}".format(instructor[1].split(" ")[0], instructor[0])
 
     section_status = str(line[83:90]).strip()
